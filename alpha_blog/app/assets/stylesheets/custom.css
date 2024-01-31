@@ -1,5 +1,43 @@
+@import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
-    background-color:  rgb(218, 220, 223) !important;
-    color: aqua;
+    background-color: black !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+#logo {
+    float: left;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+
+#home-container {
+    margin-top: 25px;
+}
+
+.jumbotron {
+    text-align: center;
+    height: 420px;
+    background-color: rgb(208, 210, 210);
+    border-radius: 10px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#page-content {
+    flex: 1 0 auto;
+    background-color: rgb(234, 232, 232);
+}
+
+#sticky-footer {
+    flex-shrink: none;
 }
