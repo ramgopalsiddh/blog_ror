@@ -1,0 +1,21 @@
+Validations - text references
+-----------------------------------------------------------------
+You can view the code added for the validations to the article model 
+here: https://github.com/udemyrailscourse/alpha-blog-6/commit/2efe9c071f85659bdb3e023871c55433d2a253bd
+
+Validations enforce constraints on your model so you can have greater control on 
+what you are allowing as data to be saved in your database/tables.
+
+
+sytex for validations 
+
+class Article < ApplicationRecord
+  validates :title, presence: true, length: { minimum: 6, maximum: 100 }
+  validates :description, presence: true, length: { minimum: 10, maximum: 300 }
+end
+
+In this we validates presence and minimum & maximum length of title and description.
+
+
+For Know more about validations:-
+        https://guides.rubyonrails.org/active_record_validations.html

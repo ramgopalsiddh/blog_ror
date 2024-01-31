@@ -1,0 +1,28 @@
+Show articles feature - text references and code
+------------------------------------------------------------------------------------
+You can find all the code added for the show feature for our articles resource 
+here: https://github.com/udemyrailscourse/alpha-blog-6/commit/7304bca894202f78535b4abdc870d42f6a254967
+
+
+Show actions are usually used to display individual items in a resource. For example:
+
+- a specific article from an articles table
+
+- a specific user's profile from a social media app
+
+- details of a specific stock from a stocks table
+
+- a specific recipe from a list of recipes
+
+The steps are to -
+
+1) Have a route for it
+
+2) Have the corresponding controller/action that the route directs the request to
+
+3) Have a corresponding view to display to the user who makes the request
+
+
+The code details for each step are in the link provided at the beginning of this text 
+resource. As a reminder: the red highlighted area are removals and the green highlighted area are additions.
+
