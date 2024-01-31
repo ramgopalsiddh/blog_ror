@@ -1,0 +1,25 @@
+CRUD ops from rails console - text directions and code
+--------------------------------------------------------------------------------------------
+To find an article by id you can use the find method like below:
+
+Article.find(1) # replace 1 with id of article you want to find
+
+You can save this to a variable and use it like below
+
+article = Article.find(1)
+article.title # to display (get) the title
+article.description # to display (get) the description
+You can use the methods below to view the first and last articles of the articles table:
+
+Article.first # display the first article in the articles table
+Article.last # display the last article in the articles table
+You can update an article by finding it first and then using setters for the attributes that the model provides like below:
+
+article = Article.find(id of article you want to edit)
+article.title = "new title"
+article.description = "new description"
+article.save
+You can delete an article by using the destroy method. A sample sequence could be like below:
+
+article = Article.find(id of article you want to delete)
+article.destroy
