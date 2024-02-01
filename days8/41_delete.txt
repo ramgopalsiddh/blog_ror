@@ -1,0 +1,16 @@
+Delete articles - text references
+------------------------------------------------------------------------------------------
+Deleting articles can be accomplished using the destroy action in the articles controller. 
+The standard deletion process would look like below:
+
+1. Expose the destroy route.
+
+2. Add the destroy action in the articles controller.
+
+3. Find the article to delete and delete it using the destroy method within the destroy action.
+
+All the code added in the video for the destroy action can be found 
+here: https://github.com/udemyrailscourse/alpha-blog-6/commit/a1634510396abc38d049ba04e84368a397efe5ab
+
+Please review the video if you want to learn more about the completion of all the 
+REST routes for our articles resource.
