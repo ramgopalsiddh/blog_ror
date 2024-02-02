@@ -12,8 +12,15 @@
   </head>
 
   <body>
-    <%= render 'layouts/navigation' %>
-    <%= render 'layouts/messages' %>
-    <%= yield %>
+    <div class="d-flex flex-column min-vh-100">
+      <div class="flex-grow-1">
+        <!-- Your page content goes here -->
+        <%= render 'layouts/navigation' %>
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </div>
+      <!-- Render Footer -->
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
