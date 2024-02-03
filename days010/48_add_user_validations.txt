@@ -1,0 +1,17 @@
+Add user validations - text directions and code
+---------------------------------------------------------------------------------------
+Validations for User class:
+
+- username must be present and unique, length between 3 and 25 characters
+
+- email must be present and unique, length max of 105 characters
+
+- validate email format using regex (regular expression)
+
+You can find the code added to the user model during the video 
+here: https://github.com/udemyrailscourse/alpha-blog-6/commit/1834571a5a219fb3347f0a3d658a7a8e89607a78
+
+The ruby regular expression used to match the format of valid email addresses is listed below.
+
+/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
