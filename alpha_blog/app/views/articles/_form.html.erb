@@ -3,7 +3,7 @@
   <div class="row justify-content-center">
 
     <!-- show errors by render errors from shared folder  -->
-    <%= render 'shared/errors' %>
+    <%= render 'shared/errors', obj: @article %>
 
     <!-- Form for submit title and description -->
     <%= form_with(model: @article, class: "shadow p-3 mb-3  rounded", local: true, data: {turbo: false })  do |f| %>

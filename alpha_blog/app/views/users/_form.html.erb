@@ -1,0 +1,48 @@
+<div class="container ">
+
+    <div class="row justify-content-center">
+  
+      <!-- show errors by render errors from shared folder  -->
+      <%= render 'shared/errors', obj: @user %>
+  
+      <!-- Form for submit title and description -->
+      <%= form_with(model: @user, class: "shadow p-3 mb-3  rounded", local: true, data: {turbo: false })  do |f| %>
+  
+        <div class="mb-3 row">
+          <%= f.label :username, class: "col-sm-2 col-form-label fw-bold" %>
+          <div class="col-sm-10">
+            <%= f.text_field :username, class: "form-control shadow rounded", placeholder: "Enter a Username" %>
+          </div>
+        </div>
+  
+        <div class="mb-3 row">
+          <%= f.label :email, class: "col-sm-2 col-form-label fw-bold" %>
+          <div class="col-sm-10">
+            <%= f.email_field :email, class: "form-control shadow rounded", placeholder: "Enter Your Email Address" %>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+            <%= f.label :password, class: "col-sm-2 col-form-label fw-bold" %>
+            <div class="col-sm-10">
+              <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "Enter Your password" %>
+            </div>
+        </div>
+
+        <div class="mb-3 row justify-content-center">
+          <div class="col-8">
+            <%= f.submit class: "btn btn-outline-success btn-lg " %>
+          </div>
+        </div>
+  
+        <div class="mb-3 row justify-content-center">
+          <div class="col-8">
+            <%= link_to 'Return 🔙 to Articles listing', articles_path, class: "btn btn-outline-primary btn-lg" %>
+          </div>
+        </div>
+  
+      </div>
+      <% end %>
+  
+  </div>
+  
