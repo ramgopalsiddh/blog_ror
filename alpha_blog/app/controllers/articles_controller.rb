@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
 
   def index
     # @articles = Article.paginate(page: params[:page], per_page: 5)
+    # iteam is define no. of iteam per page 
     @pagy, @articles = pagy(Article.all, items: 5)
   end
 
