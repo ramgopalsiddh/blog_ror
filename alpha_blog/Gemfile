@@ -71,3 +71,6 @@ gem 'bootstrap', '~> 5.3.2'
 gem 'jquery-rails'
 
 gem 'dartsass-sprockets'
+
+# add Gem for pagination,  source  https://github.com/ddnexus/pagy?tab=readme-ov-file
+gem 'pagy', '~> 6.4', '>= 6.4.3'

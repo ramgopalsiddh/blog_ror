@@ -8,5 +8,12 @@
 
 <h3 class="text-center pt-4">Articles</h3>
 
+<div class="pagination-container">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>
+
 <%= render 'articles/article' %>
 
+<div class="pagination-container">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>

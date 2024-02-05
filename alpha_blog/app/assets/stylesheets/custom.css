@@ -43,3 +43,12 @@ body {
     flex-shrink: none;
 }
 
+/* style for pagination */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+  }
+
+.page-item:not(:first-child) .page-link {
+    border-radius: 6px;
+}

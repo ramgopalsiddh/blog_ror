@@ -8,4 +8,6 @@ module ApplicationHelper
     image_tag(robot_url, alt: user.username, class: "rounded-3 shadow mx-auto d-block")
   end
 
+  include Pagy::Frontend
+
 end

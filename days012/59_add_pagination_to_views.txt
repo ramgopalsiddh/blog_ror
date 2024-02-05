@@ -1,0 +1,71 @@
+Add pagination to views - text references
+---------------------------------------------------------------------------------------
+NOTE :- I USE This
+------------------------------------------------------------------------------------------------
+NOTE :- I USE "PAGY" instence of will paginate, pagy(https://github.com/ddnexus/pagy?tab=readme-ov-file#pagy) 
+is more fast,easy and light then will paginate and will paginate is old and get low updated then pagy
+-------------------------------------------------------------------------------------------------
+
+pagy :- https://github.com/ddnexus/pagy
+
+ Refer documentaion(https://ddnexus.github.io/pagy/) for set-up pagy(pagination) 
+
+
+----------------------------------------------------------------------------
+users_controller.rb
+----------------------------------------------------------------------------
+ def show
+    @user = User.find(params[:id])
+    @pagy, @articles = pagy(@user.articles, items: 3)
+  end
+
+  def index
+    # @users = User.all
+    @pagy, @users = pagy(User.all, items: 3)
+  end
+------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+articles_controller.rb
+-------------------------------
+def index
+    # @articles = Article.paginate(page: params[:page], per_page: 5)
+    @pagy, @articles = pagy(Article.all, items: 5)
+  end
+---------------------------------------------------------------------------------
+
+
+----------------------------------------------------------------------------------
+index.html.erb(Add paginate in view(frontend))
+--------------------------------------
+<div class="pagination-container">
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>
+------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------------
+The code changes made during the video can be found (course instracter use this method for pagination)
+-------------------------------------------------------------------------------------------------------
+here: https://github.com/udemyrailscourse/alpha-blog-6/commit/39f3239e6be61c1d323cb1845aa81a1a54b0c6fb
+
+The will_paginate gem docs and references can be found 
+here: https://github.com/mislav/will_paginate
+
+Summary:
+
+- Installed the will_paginate gem to the application in order to add pagination to the articles
+ index, users index and users show views.
+
+- Modified the styling for the pagination based on styling examples provided by the creator of 
+the will_paginate gem here: http://mislav.github.io/will_paginate/
+
+- Tested out with 5 objects per page. This can be increased or decreased using the per_page 
+argument in the actions.
+
+
+
+
