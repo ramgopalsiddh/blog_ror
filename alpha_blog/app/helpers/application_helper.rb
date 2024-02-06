@@ -1,5 +1,7 @@
 module ApplicationHelper
 
+  include Pagy::Frontend
+
   def avatar_for(user, options = { size: '80x80' })
     email_address = user.email.downcase
     hash = Digest::MD5.hexdigest(email_address)
@@ -8,15 +10,5 @@ module ApplicationHelper
     image_tag(robot_url, alt: user.username, class: "rounded-3 shadow mx-auto d-block")
   end
 
-  include Pagy::Frontend
-
-
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
-
-  def logged_in?
-    !!current_user
-  end
 
 end
