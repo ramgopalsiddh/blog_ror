@@ -19,7 +19,9 @@
           <small>Created <%= time_ago_in_words(@article.created_at) %> ago, Edited <%= time_ago_in_words(@article.updated_at) %> ago </small>
         </div>
         <div class="card-footer">
-          <%= link_to '➕ 🆕 Article', new_article_path, class: "btn btn-outline-primary btn-md" %>
+          <% if logged_in? %>
+            <%= link_to '➕ 🆕 Article', new_article_path, class: "btn btn-outline-primary btn-md" %>
+          <% end %>
           <%= link_to 'Return 🔙 to Articles listing', articles_path, class: "btn btn-outline-primary" %>
         </div>
       </div>
