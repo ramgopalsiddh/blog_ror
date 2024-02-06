@@ -1,0 +1,10 @@
+Restrict actions from UI - text references
+-------------------------------------------------------------------------------------------
+Code updates made during the last video can be found 
+here: https://github.com/udemyrailscourse/alpha-blog-6/commit/2a6af60ee69eb0e4baba9f880120de24cc331e67
+
+Summary of changes:
+
+- Added logged in and current user == article user based restrictions 
+    to articles/_article.html.erb partial, articles/show.html.erb, 
+    users/index.html.erb and users/show.html.erb.
