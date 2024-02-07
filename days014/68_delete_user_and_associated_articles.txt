@@ -1,0 +1,16 @@
+Delete user - text references
+-------------------------------------------------------------------------------
+Code changes made during the previous video can be found
+ here: https://github.com/udemyrailscourse/alpha-blog-6/commit/dd412a935ae37bd501f1e69b663fba11df6d64f5
+
+
+
+Summary of changes:
+
+- Added functionality for users to delete their own accounts using a destroy method
+ in the users controller.
+
+- Added a link to delete account to the users' profile dropdown navigation option.
+
+- Utilized a couple of existing methods (as before_action methods) to secure the
+ newly created destroy action at controller level.

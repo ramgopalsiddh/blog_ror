@@ -25,6 +25,7 @@
               <ul class="dropdown-menu">
                 <li><%= link_to "View Your Profile", user_path(current_user), class: "dropdown-item" %></li>
                 <li><%= link_to "Edit Your Profile", edit_user_path(current_user), class: "dropdown-item" %></li>
+                <li><%= link_to "Delete Your Profile", user_path(current_user), class: "dropdown-item text-danger", data: {turbo_method: :delete, "turbo-confirm": "Are you sure? All your Articles and Account info will be deleted as well"}%></li>
               </ul>
             </li>
 
