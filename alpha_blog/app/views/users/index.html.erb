@@ -20,9 +20,10 @@
                 <% if user == current_user %>
                   <%= link_to 'Edit Profile', edit_user_path(user), class: "btn btn-outline-info" %>
                 <% end %>
-              <% end %>
-              <% if current_user.admin? %>
-                <%= link_to "Delete User", user_path(user), class: "btn btn-outline-danger", data: {turbo_method: :delete, "turbo-confirm": "Are you sure? You want to delete the User and all associated Articles ?"} %>
+              
+                <% if current_user.admin? %>
+                  <%= link_to "Delete User", user_path(user), class: "btn btn-outline-danger", data: {turbo_method: :delete, "turbo-confirm": "Are you sure? You want to delete the User and all associated Articles ?"} %>
+                <% end %>
               <% end %>
           </div>
           <div class="card-footer text-muted">
