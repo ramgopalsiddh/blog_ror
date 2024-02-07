@@ -22,6 +22,10 @@ class UsersController < ApplicationController
   end
 
   def update
+    if user_params[:password].blank? && user_params[:password_confirmation].blank?
+      user_params.delete(:password)
+      user_params.delete(:password_confirmation)
+    end
     # @user = User.find(params[:id])
     if @user.update(user_params)
       flash[:notice] = "#{@user.username} Your account information was successfully updated"
@@ -52,7 +56,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:username, :email, :password)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation)
   end
 
   def set_user
