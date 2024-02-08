@@ -17,7 +17,11 @@
         <div class="mb-3 row">
             <%= f.label :password, class: "col-sm-2 col-form-label fw-bold" %>
             <div class="col-sm-10">
-              <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "Enter Your password" %>
+              <%= f.password_field :password, class: "form-control shadow rounded", placeholder: "Enter Your password", id: "password" %>
+              <div class="mt-3">
+                <%= check_box_tag 'show_password', '1', false, id: 'show_password_checkbox' %>
+                <%= label_tag 'show_password', 'Show Password' %>
+              </div>
             </div>
         </div>
 

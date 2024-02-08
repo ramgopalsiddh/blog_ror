@@ -27,3 +27,18 @@ document.addEventListener("turbo:load", function() {
       console.error("One or more elements not found in the DOM.");
   }
 });
+
+
+// function for login form
+document.addEventListener("turbo:load", function() {
+  const passwordField = document.getElementById("password");
+  const showPasswordCheckbox = document.getElementById("show_password_checkbox");
+
+  if (passwordField && showPasswordCheckbox) {
+      showPasswordCheckbox.addEventListener("change", function() {
+          const showPassword = showPasswordCheckbox.checked;
+
+          passwordField.type = showPassword ? "text" : "password";
+      });
+  }
+});
