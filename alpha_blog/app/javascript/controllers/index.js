@@ -10,15 +10,20 @@ eagerLoadControllersFrom("controllers", application)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
 
-document.addEventListener("DOMContentLoaded", function() {
-    const passwordField = document.getElementById("password_field");
-    const passwordConfirmationField = document.getElementById("password_confirmation_field");
-    const showPasswordCheckbox = document.getElementById("show_password_checkbox");
-  
-    showPasswordCheckbox.addEventListener("change", function() {
-      const showPassword = showPasswordCheckbox.checked;
-  
-      passwordField.type = showPassword ? "text" : "password";
-      passwordConfirmationField.type = showPassword ? "text" : "password";
-    });
-  });
+// function for signup and edit user form
+document.addEventListener("turbo:load", function() {
+  const passwordField = document.getElementById("password_field");
+  const passwordConfirmationField = document.getElementById("password_confirmation_field");
+  const showPasswordCheckbox = document.getElementById("show_password_checkbox");
+
+  if (passwordField && passwordConfirmationField && showPasswordCheckbox) {
+      showPasswordCheckbox.addEventListener("change", function() {
+          const showPassword = showPasswordCheckbox.checked;
+
+          passwordField.type = showPassword ? "text" : "password";
+          passwordConfirmationField.type = showPassword ? "text" : "password";
+      });
+  } else {
+      console.error("One or more elements not found in the DOM.");
+  }
+});
