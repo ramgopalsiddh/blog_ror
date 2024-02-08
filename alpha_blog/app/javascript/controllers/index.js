@@ -9,3 +9,16 @@ eagerLoadControllersFrom("controllers", application)
 // Lazy load controllers as they appear in the DOM (remember not to preload controllers in import map!)
 // import { lazyLoadControllersFrom } from "@hotwired/stimulus-loading"
 // lazyLoadControllersFrom("controllers", application)
+
+document.addEventListener("DOMContentLoaded", function() {
+    const passwordField = document.getElementById("password_field");
+    const passwordConfirmationField = document.getElementById("password_confirmation_field");
+    const showPasswordCheckbox = document.getElementById("show_password_checkbox");
+  
+    showPasswordCheckbox.addEventListener("change", function() {
+      const showPassword = showPasswordCheckbox.checked;
+  
+      passwordField.type = showPassword ? "text" : "password";
+      passwordConfirmationField.type = showPassword ? "text" : "password";
+    });
+  });
