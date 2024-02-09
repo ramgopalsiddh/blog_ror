@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AlphaBlog</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", media: 'all', "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+<head>
+  <title>AlphaBlog</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
-    <div class="d-flex flex-column min-vh-100">
-      <div class="flex-grow-1">
-        <!-- Your page content goes here -->
-        <%= render 'layouts/navigation' %>
-        <%= render 'layouts/messages' %>
-        <%= yield %>
-      </div>
-      <!-- Render Footer -->
-      <%= render 'layouts/footer' %>
+  <%= stylesheet_link_tag "application" , media: 'all' , "data-turbo-track"=> "reload" %>
+  <%= stylesheet_link_tag "custom" , "data-turbo-track"=> "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+
+<body>
+  <div class="d-flex flex-column min-vh-100">
+    <div class="flex-grow-1">
+      <!-- Your page content goes here -->
+      <%= render 'layouts/navigation' %>
+      <%= render 'layouts/messages' %>
+      <%= yield %>
     </div>
-  </body>
+    <!-- Render Footer -->
+    <%= render 'layouts/footer' %>
+  </div>
+</body>
+
 </html>
