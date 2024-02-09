@@ -10,12 +10,24 @@
 
 <h3 class="text-center pt-4">Articles</h3>
 
-<div class="pagination-container">
-  <%== pagy_bootstrap_nav(@pagy) %>
-</div>
+<% if @user.articles.count > 3 %>
+  <div class="pagination-container">
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
+<% end %>
 
-<%= render 'articles/article' %>
 
-<div class="pagination-container">
-  <%== pagy_bootstrap_nav(@pagy) %>
-</div>
+<% if @user.articles.count > 0 %>
+  <!-- Print articles if the user has articles -->
+  <%= render 'articles/article' %>
+<% else %>
+  <!-- Print message if the user has no articles -->
+  <h3 class="text-center pt-4">This user doesn't have any articles.</h3>
+<% end %>
+
+
+<% if @articles.count > 2 %>
+  <div class="pagination-container">
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
+<% end %>

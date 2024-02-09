@@ -1,8 +1,10 @@
 <h1 class="text-center pt-4">Alpha Bloggers</h1>
 
-<div class="pagination-container">
-  <%== pagy_bootstrap_nav(@pagy) %>
-</div>
+<% if total_users = User.count > 3 %>
+  <div class="pagination-container">
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
+<% end %>
 
 <div class="container">
   <% @users.each do |user| %>
@@ -35,7 +37,9 @@
   <% end %>
 </div>
 
-<div class="pagination-container">
-  <%== pagy_bootstrap_nav(@pagy) %>
-</div>
+<% if @users.size > 2 %>
+  <div class="pagination-container">
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
+<% end %>
 

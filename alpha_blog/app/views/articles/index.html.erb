@@ -1,14 +1,16 @@
 <h1 class="text-center pt-4">Listing all Articles</h1>
 
 <!-- add pagination  -->
-<div class="pagination-container">
-  <%== pagy_bootstrap_nav(@pagy) %>
-</div>
+<% if Article.count > 5 %>
+  <div class="pagination-container">
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
+<% end %>
 
 <%= render 'article' %>
 
-<div class="pagination-container">
-  <%== pagy_bootstrap_nav(@pagy) %>
-  <!-- <%== pagy_bootstrap_combo_nav_js(@pagy) %> -->
-  <!-- <%== pagy_nav(@pagy) %> -->
-</div>
+<% if @articles.size > 4 %>
+  <div class="pagination-container">
+    <%== pagy_bootstrap_nav(@pagy) %>
+  </div>
+<% end %>
