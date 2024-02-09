@@ -1,15 +1,18 @@
 <h1 class="text-center pt-4">Create a new Category</h1>
 
-<div class="container text-center ">
-    <div class="row justify-content-center">
-  
-      <!-- show errors by render errors from shared folder  -->
-      <%= render 'shared/errors', obj: @category %>
-  
+<div class="row mb-3 container justify-content-center">
+  <div class="col-sm-8">
+  <!-- show errors by render errors from shared folder  -->
+  <%= render 'shared/errors', obj: @category %>
+  </div>
+</div>
+
+<div class="container text-center w-75">
+    <div class="row  justify-content-center">
       <!-- Form for submit title and description -->
       <%= form_with(model: @category, class: "shadow p-3 mb-3  rounded", local: true, data: {turbo: false })  do |f| %>
   
-        <div class="mb-3 row justify-content-center">
+        <div class="mb-3 row ">
           <%= f.label :name, "Category Name:", class: "col-sm-2 col-form-label fw-bold" %>
           <div class="col-sm-5">
             <%= f.text_field :name, class: "form-control shadow rounded", placeholder: "Enter Category Name" %>
@@ -17,13 +20,13 @@
         </div>
 
         <div class="mb-3 row ">
-          <div class="col-11">
+          <div class="col-6">
             <%= f.submit class: "btn btn-outline-success btn-lg" %>
           </div>
         </div>
   
         <div class="mb-3">
-          <div class="col-12">
+          <div class="col-7">
             <%= link_to 'Return 🔙 to Articles listing', articles_path, class: "btn btn-outline-primary btn-lg" %>
           </div>
         </div>
