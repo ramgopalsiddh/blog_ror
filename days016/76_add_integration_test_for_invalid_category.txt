@@ -1,0 +1,8 @@
+Integration test for invalid category - text references
+-------------------------------------------------------------------------------------------
+Code changes made during the previous video can be found
+ here: https://github.com/udemyrailscourse/alpha-blog-6/commit/315889ae89d691ae3a85e93bc41c8c74d3d1a143
+
+Summary of changes:
+
+- Added integration test to test for invalid submissions made during the category creation process.
