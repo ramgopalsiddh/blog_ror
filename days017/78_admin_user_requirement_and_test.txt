@@ -1,0 +1,20 @@
+Admin user requirement and test - text references
+----------------------------------------------------------------------------------------------
+Code changes made during the previous video can be found
+ here: https://github.com/udemyrailscourse/alpha-blog-6/commit/9106572e5d5be2922311e3f1ad40a0042449f6ae
+
+
+Summary of changes: 
+
+- Add controller test to ensure categories cannot be created by non-admins.
+
+- Add require_admin method (private) to categories controller and use it as before_action
+ for new and create actions.
+
+- Create admin user in categories controller test and sign the user in for new and create
+ action tests.
+
+- Build sign_in_as helper method to test_helper.rb file, so it can be used to sign users in for tests.
+
+- Modify categories integration test file to create and sign a user in (as admin) in order
+ to proceed with the tests.
