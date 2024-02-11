@@ -1,0 +1,14 @@
+Complete category index and show - text references
+------------------------------------------------------------------------------------
+Code changes made during the previous video can be found
+ here: https://github.com/udemyrailscourse/alpha-blog-6/commit/e00a6dd9d51ebb5102d25cd5c23fbfbff63f8765
+
+
+Summary of changes:
+
+- Added display of number of articles associated with each category in the categories index listing.
+
+- Completed categories show view by using code from users/show view as starting template.
+
+- Initiated @articles instance variable in categories controller show action to capture all
+  articles associated with a specific category.

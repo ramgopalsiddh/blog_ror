@@ -1,1 +1,29 @@
 <h1 class="text-center pt-4">Category: <%= @category.name %></h1>
+
+<% if logged_in? && current_user.admin? %>
+  <div class="text-center pt-4">
+    <%= link_to "Edit Category Name", edit_category_path(@category), class: "btn btn-outline-info" %>
+  </div>
+<% end %>
+
+<h3 class="text-center pt-4">Articles</h3>
+
+  <% if @category.articles.count > 3 %>
+    <div class="pagination-container">
+      <%== pagy_bootstrap_nav(@pagy) %>
+    </div>
+  <% end %>
+
+  <% if @category.articles.empty? %>
+    <!-- Print message if the category has no articles -->
+    <h3 class="text-center pt-4">This category doesn't have any articles.</h3>
+  <% else %>
+    <!-- Print articles if the category has articles -->
+    <%= render 'articles/article' %>
+  <% end %>
+
+  <% if @articles.count >= 3 %>
+    <div class="pagination-container">
+      <%== pagy_bootstrap_nav(@pagy) %>
+    </div>
+  <% end %>

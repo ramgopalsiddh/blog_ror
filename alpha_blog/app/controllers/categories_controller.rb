@@ -21,7 +21,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.find(params[:id])
+   @category = Category.find(params[:id])
+   @pagy, @articles = pagy(@category.articles, items: 3)
   end
 
   private
