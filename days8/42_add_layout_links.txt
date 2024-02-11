@@ -1,7 +1,0 @@
-Layout links: text references
--------------------------------------------------------------------------------------------
-We added a lot of links to the application in order to perform all the actions for articles,
- along with adding the ability to navigate around the application. These were accomplished 
- using layout links. All code changes/additions made during the video to cleanup the look of 
- the application can be found 
- here: https://github.com/udemyrailscourse/alpha-blog-6/commit/cf48891f1561626d5c3d64e5ef6e56da3ab66fc7

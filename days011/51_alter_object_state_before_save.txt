@@ -1,9 +1,0 @@
-Alter object state before_save - text directions
----------------------------------------------------------------------------------------
-In the video we used the before_save method to change emails entered to lowercase before 
-saving them to the database. To accomplish this we added the line before to our user model:
-
-before_save { self.email = email.downcase }
-
-The code change made in the video can be found in the commit 
-here: https://github.com/udemyrailscourse/alpha-blog-6/commit/02ad866b53febcee81c760fb118aa6124bea4692
