@@ -1,0 +1,14 @@
+<h1 class="text-center pt-4">Edit Category Name</h1>
+
+<div class="container text-center w-75 shadow p-3 mb-3  rounded">
+  <div class="row  justify-content-center ">
+    <%= render 'form' %>
+
+    <div class="mb-3">
+      <div class="col-7">
+        <%= link_to "Cancle and Return 🔙 to #{@category.name}", category_path(@category), class: "btn btn-outline-primary btn-lg" %>
+      </div>
+    </div>
+
+  </div>
+</div>

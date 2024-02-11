@@ -1,0 +1,16 @@
+Edit categories - text references
+--------------------------------------------------------------------------------------
+Code changes made during the previous video can be found
+ here: https://github.com/udemyrailscourse/alpha-blog-6/commit/309e5fae77e91ba7199f4fef7c8b28b2985f9e1a
+
+
+Summary of changes:
+
+- Added edit and update actions to categories controller.
+
+- Added edit.html.erb view template.
+
+- Added _form.html.erb partial under categories and extracted errors/form code from
+  new.html.erb and added this partial.
+
+- Render form partial from both new and edit view templates.
