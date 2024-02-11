@@ -1,0 +1,25 @@
+<div class="row mb-3 container justify-content-center">
+  <div class="col-sm-8">
+  <!-- show errors by render errors from shared folder  -->
+  <%= render 'shared/errors', obj: @category %>
+  </div>
+</div>
+
+<!-- Form for submit Category name -->
+<%= form_with(model: @category, local: true, data: {turbo: false })  do |f| %>
+
+  <div class="mb-3 row ">
+    <%= f.label :name, "Category Name:", class: "col-sm-2 col-form-label fw-bold" %>
+    <div class="col-sm-5">
+      <%= f.text_field :name, class: "form-control shadow rounded", placeholder: "Enter Category Name" %>
+    </div>
+  </div>
+
+  <div class="mb-3 row ">
+    <div class="col-6">
+      <%= f.submit class: "btn btn-outline-success btn-lg" %>
+    </div>
+  </div>
+<% end %>
+
+
