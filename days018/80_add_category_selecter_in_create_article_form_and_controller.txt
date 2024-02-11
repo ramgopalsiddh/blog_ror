@@ -1,0 +1,22 @@
+Add association from UI - text references
+--------------------------------------------------------------------------------------------
+Code changes made during the previous video can be found
+ here: https://github.com/udemyrailscourse/alpha-blog-6/commit/d307ea65a16e93aa700fa6a691694cd82a38fca1
+
+
+Summary of changes:
+
+- White-list category ids in article_params method of the articles controller.
+
+
+- Add select box for categories to _form.html.erb (form partial) used for articles
+ (views/articles/_form.html.erb).
+
+
+If you want to use checkboxes instead of the select box we used to display/select categories,
+ you can reference the code used in the Rails 5 version of the app
+  here: https://github.com/udemyrailscourse/alpha-blog-11-2017-5.1.4/blob/master/app/views/articles/_form.html.erb
+
+
+Note: If you do select this option to use the previous version using checkboxes, make sure you use the
+ appropriate classes for styling from Bootstrap (the version used in the repo is Bootstrap 3).
