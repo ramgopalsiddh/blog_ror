@@ -9,7 +9,9 @@ gem "rails", "~> 7.1.3"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 1.4", group: [:development, :test]
+
+gem "pg", group: :production
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -52,6 +54,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "letter_opener_web"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -74,3 +77,4 @@ gem 'dartsass-sprockets'
 
 # add Gem for pagination,  source  https://github.com/ddnexus/pagy?tab=readme-ov-file
 gem 'pagy', '~> 6.4', '>= 6.4.3'
+gem "sendgrid-ruby"
