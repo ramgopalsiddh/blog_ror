@@ -1,25 +1,44 @@
-<h1>Reset Your Password</h1>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mt-5">
+        <div class="card-header">
+          <h4>Reset Your Password</h4>
+        </div>
+        <div class="card-body">
+          <%= form_with model: @user, url: update_password_reset_path(token: params[:token]) do |form| %>
+            <% if form.object.errors.any? %>
+              <div class="alert alert-danger">
+                <% form.object.errors.full_messages.each do |message| %>
+                  <div><%= message %></div>
+                <% end %>
+              </div>
+            <% end %>
 
-<%= form_with model: @user, url: password_reset_path(token: params[:token]) do |form| %>
-  <% if form.object.errors.any? %>
-    <div class="alert alert-danger">
-      <% form.object.errors.full_messages.each do |message| %>
-        <div><%= message %></div>
-      <% end %>
+            <div class="mb-3">
+              <%= form.label :password, "New Password", class: "form-label" %>
+              <%= form.password_field :password, class: "form-control" %>
+            </div>
+
+            <div class="mb-3">
+              <%= form.label :password_confirmation, "Confirm New Password", class: "form-label" %>
+              <%= form.password_field :password_confirmation, class: "form-control" %>
+            </div>
+
+            <div class="mb-3 row justify-content-center">
+              <div class="col-8">
+                <%= form.submit "Reset Password", class: "btn btn-outline-success btn-lg" %>
+              </div>
+            </div>
+
+            <div class="mb-3 row justify-content-center">
+              <div class="col-8">
+                <%= link_to "Back to Login", login_path, class: "btn btn-outline-primary btn-lg" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="mb-3">
-    <%= form.label :password, "New Password" %>
-    <%= form.password_field :password, class: "form-control" %>
   </div>
-
-  <div class="mb-3">
-    <%= form.label :password_confirmation, "Confirm New Password" %>
-    <%= form.password_field :password_confirmation, class: "form-control" %>
-  </div>
-
-  <div class="mb-3">
-    <%= form.submit "Reset Password", class: "btn btn-primary" %>
-  </div>
-<% end %>
+</div>
